@@ -72,7 +72,7 @@ function DarkMode() {
    // HOA ANH DAO
 //▬▬▬▬▬▬▬▬▬▬
 
-/*
+
 var stop, staticx;
 var img = new Image();
 img.src = "https://i.imgur.com/R9XUjfF.png";
@@ -242,5 +242,5 @@ img.src = "https://i.imgur.com/R9XUjfF.png";
 			}
 		
 		
-*/
+
 //////////////////////////////////////////////////////////////
