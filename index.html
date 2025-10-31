@@ -1,177 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link rel="shortcut icon" href="https://sf-static.upanhlaylink.com/img/image_2025102996838edee34d1f2b71c5fa83eb6f4697.jpg" type="image/x-icon">
-    <title>TuanTai | HOME</title>
-    <link rel="stylesheet" href="_thanhdieu.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="stylesheet" href="index.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-    <meta name="author" content="Đây Là Website Của TuanTai, Rất Mong Được Chào Đón Bạn !">
-    <meta property="og:title" content="HELLO TA CHI HẢO - I'AM LATT !">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://ttai07.github.io/220710/">
-    <meta property="og:image" content="https://sf-static.upanhlaylink.com/img/image_2025102996838edee34d1f2b71c5fa83eb6f4697.jpg">
-    <meta property="og:image:width" content="120">
-    <meta property="og:image:height" content="120">
-    <meta property="og:site_name" content="Tuan Tai">
-    <meta name="theme-color" content="#00FFFF" />
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js' type='text/javascript'></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <link rel="shortcut icon" href="https://sf-static.upanhlaylink.com/img/image_2025102996838edee34d1f2b71c5fa83eb6f4697.jpg" type="image/x-icon">
+  <title>TuanTai | HOME</title>
+  <link rel="stylesheet" href="_thanhdieu.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <meta name="author" content="Đây Là Website Của TuanTai, Rất Mong Được Chào Đón Bạn !">
+  <meta property="og:title" content="HELLO TA CHI HẢO - I'AM LATT !">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://ttai07.github.io/220710/">
+  <meta property="og:image" content="https://sf-static.upanhlaylink.com/img/image_2025102996838edee34d1f2b71c5fa83eb6f4697.jpg">
+  <meta property="og:image:width" content="120">
+  <meta property="og:image:height" content="120">
+  <meta property="og:site_name" content="Tuan Tai">
+  <meta name="theme-color" content="#00FFFF" />
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js' type='text/javascript'></script>
 
-    <!-- 🌨️ Hiệu ứng bông tuyết -->
-    <style>
-      .snowflake {
-        position: fixed;
-        top: 0;
-        color: white;
-        font-size: 10px;
-        opacity: 0.8;
-        pointer-events: none;
-        animation: fall linear infinite;
-        z-index: 9999;
-        filter: drop-shadow(0 0 3px rgba(255,255,255,0.7));
-      }
+  <!-- 🌨️ Hiệu ứng bông tuyết -->
+  <style>
+    .snowflake {
+      position: fixed;
+      top: -10vh; /* ❄️ Bắt đầu từ ngoài khung hình */
+      color: white;
+      font-size: 10px;
+      opacity: 0.8;
+      pointer-events: none;
+      animation: fall linear infinite;
+      z-index: 9999;
+      filter: drop-shadow(0 0 3px rgba(255,255,255,0.7));
+    }
 
-      @keyframes fall {
-        0% {
-          transform: translateY(0) translateX(0) rotate(0deg);
-          opacity: 1;
-        }
-        100% {
-          transform: translateY(110vh) translateX(var(--x-move)) rotate(360deg);
-          opacity: 0.3;
-        }
+    @keyframes fall {
+      0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 1;
       }
-    </style>
+      100% {
+        transform: translateY(120vh) translateX(var(--x-move)) rotate(360deg);
+        opacity: 0.2;
+      }
+    }
+  </style>
 </head>
 
 <body class="Border" onLoad="onCreate()">
-    <div class="BlurWebs">
-        <div class="Topnav">
-            <a class="Active">HOME</a>
-            <a style="color:red;"><span id="fps">60.0</span> FPS</a>
-        </div>
-        <br>
+  <div class="BlurWebs">
+    <div class="Topnav">
+      <a class="Active">HOME</a>
+      <a style="color:red;"><span id="fps">60.0</span> FPS</a>
+    </div>
+    <br>
 
-        <p align="center">
-            <img class="Blob" src="https://sf-static.upanhlaylink.com/img/image_2025102996838edee34d1f2b71c5fa83eb6f4697.jpg" width="96" height="96" alpha="@ThanhDieu@">
-        </p>
-        <h2 class="NameftTuanTai" align="center">LE ANH TUAN TAI <i class="fa fa-check-circle"></i></h2> 
-        <h2 class="TieuSu">Hey brother, I'm Tai, i'm a Developer.<br>I like website design :)</h2>
-        <br><hr class="New"><br>
+    <p align="center">
+      <img class="Blob" src="https://sf-static.upanhlaylink.com/img/image_2025102996838edee34d1f2b71c5fa83eb6f4697.jpg" width="96" height="96" alpha="@ThanhDieu@">
+    </p>
+    <h2 class="NameftTuanTai" align="center">LE ANH TUAN TAI <i class="fa fa-check-circle"></i></h2> 
+    <h2 class="TieuSu">Hey brother, I'm Tai, i'm a Developer.<br>I like website design :)</h2>
+    <br><hr class="New"><br>
 
-        <h2 class="NameFtThanhDieu">Contact Social</h2>
-        <ul class="icons">
-            <br>
-            <div class="MangXaHoiFtThanhDieu">
-                <a href="http://locket.cam/leanhtuantai" target="_blank"><div class="Tiktok">Locket</div></a><br>
-                <a href="https://facebook.com/taif.1luv" target="_blank"><div class="Facebook">Facebook</div></a><br>
-                <a href="https://zalo.me/0865389276" target="_blank"><div class="Discord">Zalo</div></a><br>
-                <a href="https://t.me/trumsuc2k11" target="_blank"><div class="Instagram">Instagram</div></a><br>
-            </div>
-        </ul>
-        <br><hr class="New"><br>
+    <h2 class="NameFtThanhDieu">Contact Social</h2>
+    <ul class="icons">
+      <br>
+      <div class="MangXaHoiFtThanhDieu">
+        <a href="http://locket.cam/leanhtuantai" target="_blank"><div class="Locket">Locket</div></a><br>
+        <a href="https://facebook.com/taif.1luv" target="_blank"><div class="Facebook">Facebook</div></a><br>
+        <a href="https://zalo.me/0865389276" target="_blank"><div class="Discord">Zalo</div></a><br>
+        <a href="https://t.me/trumsuc2k11" target="_blank"><div class="Instagram">Instagram</div></a><br>
+      </div>
+    </ul>
+    <br><hr class="New"><br>
 
-        <div class="NameftTuanTai"><h2>Mobile Banks</h2></div>
-        <div class="ThongTinThanhToan">
-            <p class="ThongTinThanhToanTitle">Vietcombank</p>
-            <p class="ThongTinThanhToanText">STK: tuantaileanh4 || CTK LE ANH TUAN TAI</p>
-        </div>
-        <br>
-        <div class="ThongTinThanhToan">
-            <p class="ThongTinThanhToanTitle">ZaloPay</p>
-            <p class="ThongTinThanhToanText">STK 0865387276 || CTK LE ANH TUAN TAI</p>
-        </div>
-        <br>
-        <div class="ThongTinThanhToan">
-            <p class="ThongTinThanhToanTitle">Paypal</p>
-            <p class="ThongTinThanhToanText">STK: @Taif || MAIL: FOREDLE2007@GMAIL.COM</p>
-        </div>
-
-        <br><hr class="ThanhGachNgang"><br>
-
-        <div class="NameFtThanhDieu">
-            <h2><i class="fas fa-code"></i> Skill Languages </h2><br>
-        </div>
-        <ul class="thanhdieuftskill outline">
-            <li class="thanhdieutransform">Javascript</li>
-            <li class="thanhdieutransform">Typescript</li><br>
-            <li class="thanhdieutransform">Lua</li>
-            <li class="thanhdieutransform">Html/Css</li><br>
-        </ul>
-
-        <hr class="ThanhGachNgang">
-        <footer class="Cuoi Trang">
-            <p class="TuanTaiFtCopyright">
-                <p class="rainbow" class="copyright">
-                    Created by 
-                    <a style="text-decoration: none;" class="copyright" href="https://www.facebook.com/100083824152269">
-                        <font class="rainbow" color="white"> tuantaileanh4</font>
-                    </a><br>
-                    <strong>All rights reserved - © 2022 </strong>
-                </p>
-            </p>
-        </footer>
+    <div class="NameftTuanTai"><h2>Mobile Banks</h2></div>
+    <div class="ThongTinThanhToan">
+      <p class="ThongTinThanhToanTitle">Vietcombank</p>
+      <p class="ThongTinThanhToanText">STK: tuantaileanh4 || CTK LE ANH TUAN TAI</p>
+    </div>
+    <br>
+    <div class="ThongTinThanhToan">
+      <p class="ThongTinThanhToanTitle">ZaloPay</p>
+      <p class="ThongTinThanhToanText">STK 0865387276 || CTK LE ANH TUAN TAI</p>
+    </div>
+    <br>
+    <div class="ThongTinThanhToan">
+      <p class="ThongTinThanhToanTitle">Paypal</p>
+      <p class="ThongTinThanhToanText">STK: @Taif || MAIL: FOREDLE2007@GMAIL.COM</p>
     </div>
 
-    <div id="Toast">Welcome to the website TUANTAI :)</div>
+    <br><hr class="ThanhGachNgang"><br>
 
-    <script type="text/javascript" src="./thanhdieuft-javascript/index.js"></script>
+    <div class="NameFtThanhDieu">
+      <h2><i class="fas fa-code"></i> Skill Languages </h2><br>
+    </div>
+    <ul class="thanhdieuftskill outline">
+      <li class="thanhdieutransform">Javascript</li>
+      <li class="thanhdieutransform">Typescript</li><br>
+      <li class="thanhdieutransform">Lua</li>
+      <li class="thanhdieutransform">Html/Css</li><br>
+    </ul>
 
-    <script type="text/javascript">
-        var fps = document.getElementById("fps");
-        var startTime = Date.now();
-        var frame = 0;
-        function tick(){
-            var time = Date.now();
-            frame++;
-            if(time - startTime > 1000){
-                fps.innerHTML = (frame / ((time - startTime) / 1000)).toFixed(1);
-                startTime = time;
-                frame = 0;
-            }
-            window.requestAnimationFrame(tick);
-        }
-        tick();
-    </script>
+    <hr class="ThanhGachNgang">
+    <footer class="Cuoi Trang">
+      <p class="rainbow copyright">
+        Created by 
+        <a style="text-decoration: none;" href="https://www.facebook.com/100083824152269">
+          <font class="rainbow" color="white"> tuantaileanh4</font>
+        </a><br>
+        <strong>All rights reserved - © 2022 </strong>
+      </p>
+    </footer>
+  </div>
 
-    <!-- 🎵 Nhạc nền -->
-    <audio id="bgMusic" src="music.mp3" preload="auto"></audio>
-    <script>
-      function playMusicOnce() {
-        const music = document.getElementById("bgMusic");
-        music.volume = 0.7;
-        music.play().catch(err => console.log("Autoplay bị chặn:", err));
-        document.removeEventListener("click", playMusicOnce);
-        document.removeEventListener("touchstart", playMusicOnce);
+  <div id="Toast">Welcome to the website TUANTAI :)</div>
+
+  <script type="text/javascript" src="./thanhdieuft-javascript/index.js"></script>
+
+  <script>
+    var fps = document.getElementById("fps");
+    var startTime = Date.now();
+    var frame = 0;
+    function tick(){
+      var time = Date.now();
+      frame++;
+      if(time - startTime > 1000){
+        fps.innerHTML = (frame / ((time - startTime) / 1000)).toFixed(1);
+        startTime = time;
+        frame = 0;
       }
-      document.addEventListener("click", playMusicOnce);
-      document.addEventListener("touchstart", playMusicOnce);
-    </script>
+      window.requestAnimationFrame(tick);
+    }
+    tick();
+  </script>
 
-    <!-- ❄️ Tạo hiệu ứng tuyết rơi -->
-    <script>
-      const snowCount = 100; // số lượng bông tuyết
-      for (let i = 0; i < snowCount; i++) {
-        const snowflake = document.createElement("div");
-        snowflake.classList.add("snowflake");
-        snowflake.textContent = "❄";
-        document.body.appendChild(snowflake);
+  <!-- 🎵 Nhạc nền -->
+  <audio id="bgMusic" src="music.mp3" preload="auto"></audio>
+  <script>
+    function playMusicOnce() {
+      const music = document.getElementById("bgMusic");
+      music.volume = 0.7;
+      music.play().catch(err => console.log("Autoplay bị chặn:", err));
+      document.removeEventListener("click", playMusicOnce);
+      document.removeEventListener("touchstart", playMusicOnce);
+    }
+    document.addEventListener("click", playMusicOnce);
+    document.addEventListener("touchstart", playMusicOnce);
+  </script>
 
-        const size = Math.random() * 10 + 5;
-        const startX = Math.random() * window.innerWidth;
-        const delay = Math.random() * 10;
-        const duration = Math.random() * 10 + 10;
-        const xMove = (Math.random() - 0.5) * 200;
+  <!-- ❄️ Tạo hiệu ứng tuyết rơi -->
+  <script>
+    const snowCount = 100; // số lượng bông tuyết
+    for (let i = 0; i < snowCount; i++) {
+      const snowflake = document.createElement("div");
+      snowflake.classList.add("snowflake");
+      snowflake.textContent = "❄";
+      document.body.appendChild(snowflake);
 
-        snowflake.style.left = `${startX}px`;
-        snowflake.style.fontSize = `${size}px`;
-        snowflake.style.animationDuration = `${duration}s`;
-        snowflake.style.animationDelay = `${delay}s`;
-        snowflake.style.setProperty("--x-move", `${xMove}px`);
-      }
-    </script>
+      const size = Math.random() * 10 + 5;
+      const startX = Math.random() * window.innerWidth;
+      const delay = Math.random() * 15;
+      const duration = Math.random() * 10 + 15;
+      const xMove = (Math.random() - 0.5) * 300; // chéo mạnh hơn
+
+      snowflake.style.left = `${startX}px`;
+      snowflake.style.fontSize = `${size}px`;
+      snowflake.style.animationDuration = `${duration}s`;
+      snowflake.style.animationDelay = `${delay}s`;
+      snowflake.style.setProperty("--x-move", `${xMove}px`);
+    }
+  </script>
 </body>
 </html>
