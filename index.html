@@ -24,7 +24,7 @@
   <style>
     .snowflake {
       position: fixed;
-      top: -10px;
+      top: -10vh; /* ❄️ Bắt đầu từ ngoài khung hình */
       color: white;
       font-size: 10px;
       opacity: 0.8;
@@ -37,14 +37,11 @@
     @keyframes fall {
       0% {
         transform: translateY(0) translateX(0) rotate(0deg);
-        opacity: 0;
-      }
-      10% {
         opacity: 1;
       }
       100% {
-        transform: translateY(110vh) translateX(var(--x-move)) rotate(360deg);
-        opacity: 0.3;
+        transform: translateY(120vh) translateX(var(--x-move)) rotate(360deg);
+        opacity: 0.2;
       }
     }
   </style>
@@ -76,7 +73,6 @@
       </div>
     </ul>
     <br><hr class="New"><br>
-
     <div class="NameftTuanTai"><h2>Mobile Banks</h2></div>
       <a href="https://sf-static.upanhlaylink.com/img/image_202510318f8bcaf030cde44cdbedc74af221abbe.jpg" target="_blank">
     <div class="ThongTinThanhToan">
@@ -111,14 +107,12 @@
 
     <hr class="ThanhGachNgang">
     <footer class="Cuoi Trang">
-      <p class="TuanTaiFtCopyright">
-        <p class="rainbow" class="copyright">
-          Created by 
-          <a style="text-decoration: none;" class="copyright" href="https://www.facebook.com/100083824152269">
-            <font class="rainbow" color="white"> tuantaileanh4</font>
-          </a><br>
-          <strong>All rights reserved - © 2022 </strong>
-        </p>
+      <p class="rainbow copyright">
+        Created by 
+        <a style="text-decoration: none;" href="https://www.facebook.com/100083824152269">
+          <font class="rainbow" color="white"> tuantaileanh4</font>
+        </a><br>
+        <strong>All rights reserved - © 2022 </strong>
       </p>
     </footer>
   </div>
@@ -127,8 +121,7 @@
 
   <script type="text/javascript" src="./thanhdieuft-javascript/index.js"></script>
 
-  <!-- FPS counter -->
-  <script type="text/javascript">
+  <script>
     var fps = document.getElementById("fps");
     var startTime = Date.now();
     var frame = 0;
@@ -145,48 +138,23 @@
     tick();
   </script>
 
-  <!-- 🎵 Nhạc nền tự bật khi tuyết rơi -->
-  <audio id="bgMusic" src="music.mp3" preload="auto" loop></audio>
+  <!-- 🎵 Nhạc nền -->
+  <audio id="bgMusic" src="music.mp3" preload="auto"></audio>
   <script>
-    const music = document.getElementById("bgMusic");
-
-    function fadeInMusic() {
-      music.volume = 0;
-      const fade = setInterval(() => {
-        if (music.volume < 0.7) {
-          music.volume += 0.05;
-        } else {
-          clearInterval(fade);
-        }
-      }, 300);
+    function playMusicOnce() {
+      const music = document.getElementById("bgMusic");
+      music.volume = 0.7;
+      music.play().catch(err => console.log("Autoplay bị chặn:", err));
+      document.removeEventListener("click", playMusicOnce);
+      document.removeEventListener("touchstart", playMusicOnce);
     }
-
-    window.addEventListener("load", () => {
-      try {
-        const playPromise = music.play();
-        if (playPromise !== undefined) {
-          playPromise
-            .then(() => {
-              fadeInMusic();
-              console.log("🎶 Nhạc tự bật khi tuyết rơi");
-            })
-            .catch(() => {
-              console.warn("⛔ Trình duyệt chặn autoplay — chờ click");
-              document.addEventListener("click", () => {
-                music.play();
-                fadeInMusic();
-              }, { once: true });
-            });
-        }
-      } catch (e) {
-        console.log("Autoplay lỗi:", e);
-      }
-    });
+    document.addEventListener("click", playMusicOnce);
+    document.addEventListener("touchstart", playMusicOnce);
   </script>
 
   <!-- ❄️ Tạo hiệu ứng tuyết rơi -->
   <script>
-    const snowCount = 100;
+    const snowCount = 100; // số lượng bông tuyết
     for (let i = 0; i < snowCount; i++) {
       const snowflake = document.createElement("div");
       snowflake.classList.add("snowflake");
@@ -195,9 +163,9 @@
 
       const size = Math.random() * 10 + 5;
       const startX = Math.random() * window.innerWidth;
-      const delay = Math.random() * 5;
-      const duration = Math.random() * 10 + 10;
-      const xMove = (Math.random() - 0.5) * 300;
+      const delay = Math.random() * 15;
+      const duration = Math.random() * 10 + 15;
+      const xMove = (Math.random() - 0.5) * 300; // chéo mạnh hơn
 
       snowflake.style.left = `${startX}px`;
       snowflake.style.fontSize = `${size}px`;
